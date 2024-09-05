@@ -1,11 +1,23 @@
 {
     "compilerOptions": {
-        "module": "CommonJS",
-        "esModuleInterop": true,
-        "target": "es6",
-        "moduleResolution": "node",
-        "sourceMap": true,
-        "outDir": "dist"
+      "module": "CommonJS",
+      "esModuleInterop": true,
+      "target": "es6",
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "outDir": "dist",
+      "rootDir": "."
     },
-    "lib": ["es2015"]
-}
+    "include": [
+      "app.ts",
+      "controllers/**/*.ts",
+      "repository/**/*.ts",
+      "routes/**/*.ts",
+      "services/**/*.ts"
+    ],
+    "exclude": [
+      "node_modules",
+      "dist"
+    ]
+  }
+  
