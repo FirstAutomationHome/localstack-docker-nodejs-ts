@@ -11,5 +11,7 @@ services:
       # LocalStack configuration: https://docs.localstack.cloud/references/configuration/
       - DEBUG=${DEBUG:-0}
     volumes:
+      - "./init-aws.sh:/etc/localstack/init/ready.d/init-aws.sh"  # ready hook
       - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
+      - "~/.aws:/root/.aws" #AWS credentials
       - "/var/run/docker.sock:/var/run/docker.sock"
